@@ -14,11 +14,11 @@ class MyUDPHandler(socketserver.BaseRequestHandler):
         socket = self.request[1]
         print("{} wrote:".format(self.client_address[0]))
         print(data)
-        socket.sendto(data.upper(), self.client_address)
+        # socket.sendto(data.upper(), self.client_address)
 
 
 if __name__ == "__main__":
-    HOST, PORT = "localhost", 7777
+    HOST, PORT = "192.168.0.115", 7777
     with socketserver.UDPServer((HOST, PORT), MyUDPHandler) as server:
         print('[UDP_reader]: start')
         server.serve_forever()

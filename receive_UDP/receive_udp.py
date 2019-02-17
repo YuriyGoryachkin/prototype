@@ -16,7 +16,7 @@ class MyUDPHandler(socketserver.BaseRequestHandler):
 
 
 if __name__ == "__main__":
-    HOST, PORT = "127.0.0.1", 7777
+    HOST, PORT = "192.168.0.115", 7777
     mess = Receiver()
     with socketserver.UDPServer((HOST, PORT), MyUDPHandler) as server:
         print('[UDP_receiver]: start')
