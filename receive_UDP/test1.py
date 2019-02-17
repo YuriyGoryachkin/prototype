@@ -1,6 +1,6 @@
 import socket
 
-port = 4843
+port = 7777
 
 server_s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 server_s.bind(('', port))
